@@ -27,5 +27,5 @@ runs:
   using: composite
   steps:
     - id: tag-version
-      run: bash $GITHUB_ACTION_PATH/src/tag-version.sh ${{ inputs.production-branch }} ${{ inputs.test-branch }} ${{ inputs.dev-branch }}
+      run: bash tag-version.sh ${{ inputs.production-branch }} ${{ inputs.test-branch }} ${{ inputs.dev-branch }}
       shell: bash
