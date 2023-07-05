@@ -2,7 +2,7 @@ name: Taggin version
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
