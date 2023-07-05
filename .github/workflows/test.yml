@@ -1,5 +1,6 @@
 name: Testing application
-on: [push]
+# On all pull requests
+on: [pull_request]
 
 
 jobs:
