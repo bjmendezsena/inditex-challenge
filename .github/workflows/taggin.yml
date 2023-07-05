@@ -1,31 +1,22 @@
-name: 'tag-version'
-description: 'Provides automated versioning of your commits using git tags each time your CI/CD workflow runs.'
-branding:
-  icon: 'tag'
-  color: 'purple'
-inputs:
-  production-branch:
-    description: 'The branch to use for stable releases in production. Default is master'
-    required: false
-    default: master
-  test-branch:
-    description: 'The branch to use for test deployments. Default is test'
-    required: false
-    default: test
-  dev-branch:
-    description: 'The branch to use for dev deployments. Default is develop'
-    required: false
-    default: develop
-outputs:
-  revision:
-    description: 'The new version that was created and tagged in the format of <major>.<minor>.<build>[.<pre-release-tag>]'
-    value: ${{ steps.tag-version.outputs.revision }}
-  is-prerelease:
-    description: 'Is true if this is a release into a non-production environment and indicates the build may be unstable. Returns false otherwise.'
-    value: ${{ steps.tag-version.outputs.is-prerelease }}
-runs:
-  using: composite
-  steps:
-    - id: tag-version
-      run: bash tag-version.sh ${{ inputs.production-branch }} ${{ inputs.test-branch }} ${{ inputs.dev-branch }}
-      shell: bash
+# example 1: on push to master
+name: Bump version
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: '0'
+
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.64.0 # Don't use @master or @v1 unless you're happy to test the latest version
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # if you don't want to set write permissions use a PAT token
+        WITH_V: false
