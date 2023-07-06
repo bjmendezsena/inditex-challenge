@@ -6,6 +6,7 @@ export const mainColors = {
     light: "#E0E0E0",
   },
   primary: {
+    50: "#E3F2F9",
     100: "#D1E6F3",
     200: "#A2CFE6",
     300: "#73B8D9",
