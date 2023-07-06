@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react";
-import { render } from "../../test-utils";
-import { ConfigSpinner } from "../../theme/components/Spinner";
+import { render } from "../../../test-utils";
+import { ConfigSpinner } from "../../../theme/components/Spinner";
 import React from "react";
 import type { SpinnerProps } from "./Spinner";
 import { Spinner } from "./Spinner";

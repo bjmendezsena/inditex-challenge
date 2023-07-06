@@ -1,5 +1,5 @@
 import { keyframes } from "@emotion/react";
-import { NavigationIndicatorThemeConfiguration } from "../../components/NavigationIndicator/NavigationIndicator";
+import { NavigationIndicatorThemeConfiguration } from "../../components";
 
 const wave = keyframes`
   0% {

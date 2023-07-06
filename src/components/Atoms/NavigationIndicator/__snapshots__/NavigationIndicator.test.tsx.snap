@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavigationIndicator/> component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-15vddy2"
+    data-testid="navigation-indicator"
+  />
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;
