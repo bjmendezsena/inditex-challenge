@@ -10,11 +10,10 @@ export const ConfigButton: ButtonThemeConfiguration = {
     paddingX: 4,
     justifyContent: "center",
     alignItems: "center",
-    apply: "textStyles.ElementsMediumSM",
     borderRadius: 8,
     transition: "all 0.2s",
     display: "inline-flex",
-    color: "grey.400",
+    color: "black",
     _disabled: {
       opacity: 1,
       backgroundColor: "grey.200",
