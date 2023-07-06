@@ -10,7 +10,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: npm test
+        run: npm test -- --coverage --coverageReporters lcov
       - uses: devmasx/coverage-check-action@v1.2.0
         with:
           type: lcov
