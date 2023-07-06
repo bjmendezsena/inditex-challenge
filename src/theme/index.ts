@@ -1,10 +1,15 @@
 import { extendTheme } from "@chakra-ui/react";
-import colors from "./colors";
-import { ConfigSpinner } from "./components/Spinner";
-import { ConfigLink } from "./components/Link";
+
+import { ConfigAvatar } from "./components/Avatar";
 import { ConfigHeader } from "./components/Header";
-import { ConfigText } from "./components/Text";
+import { ConfigLink } from "./components/Link";
 import { ConfigNavigationIndicator } from "./components/NavigationIndicator";
+import { ConfigSpinner } from "./components/Spinner";
+import { ConfigText } from "./components/Text";
+import { ConfigCard } from "./components/Card";
+
+import colors from "./colors";
+
 
 export const theme = extendTheme({
   config: {
@@ -13,11 +18,14 @@ export const theme = extendTheme({
   },
   colors,
   components: {
-    Spinner: ConfigSpinner,
-    Link: ConfigLink,
+    Avatar: ConfigAvatar,
     Header: ConfigHeader,
-    Text: ConfigText,
+    Link: ConfigLink,
     NavigationIndicator: ConfigNavigationIndicator,
+    Spinner: ConfigSpinner,
+    Text: ConfigText,
+    Card: ConfigCard,
+
   },
   global: {
     body: {
