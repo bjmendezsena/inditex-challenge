@@ -1,6 +1,7 @@
 import { keyframes } from "@emotion/react";
 import { NavigationIndicatorThemeConfiguration } from "../../components";
 
+
 const wave = keyframes`
   0% {
     transform: scale(0.5);

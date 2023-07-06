@@ -10,6 +10,7 @@ import { ConfigCard } from "./components/Card";
 
 import colors from "./colors";
 
+
 export const theme = extendTheme({
   config: {
     useSystemColorMode: false,
@@ -24,6 +25,7 @@ export const theme = extendTheme({
     Spinner: ConfigSpinner,
     Text: ConfigText,
     Card: ConfigCard,
+
   },
   global: {
     body: {
