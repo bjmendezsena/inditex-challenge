@@ -3,7 +3,7 @@ import {
   Flex as ChakraFlex,
   FlexProps,
 } from "@chakra-ui/react";
-import { BaseSingleStyleConfiguration } from "../../theme/config/BaseSingleStyleConfiguration";
+import { BaseSingleStyleConfiguration } from "../../../theme/config/BaseSingleStyleConfiguration";
 
 interface ThemeProps {
   isNavigating?: boolean;

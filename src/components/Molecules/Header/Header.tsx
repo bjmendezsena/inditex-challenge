@@ -2,7 +2,7 @@ import React from "react";
 import { useMultiStyleConfig as useChakraMultiStyleConfig } from "@chakra-ui/system";
 import type { FlexProps as ChakraFlexProps } from "@chakra-ui/react";
 import { Flex as ChakraFlex, Spacer as ChakraSpacer } from "@chakra-ui/react";
-import type { BaseMultiStyleConfiguration } from "../../theme";
+import type { BaseMultiStyleConfiguration } from "../../../theme";
 import { motion } from "framer-motion";
 
 const MotionFlex = motion(ChakraFlex);

@@ -1,6 +1,6 @@
 import React from "react";
 import { screen } from "@testing-library/react";
-import { render } from "../../test-utils";
+import { render } from "../../../test-utils";
 import type { TextProps } from "./Text";
 import { Text } from "./Text";
 
