@@ -1,5 +1,9 @@
-import React from "react";
+import { Text } from "../../components";
 
 export const PodcastList = () => {
-  return <div>PodcastList</div>;
+  return (
+    <div>
+      <Text as='h1'>PodcastList</Text>
+    </div>
+  );
 };
