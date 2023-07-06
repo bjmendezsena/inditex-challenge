@@ -2,7 +2,6 @@ name: Testing application
 # On all pull requests
 on: [pull_request]
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -12,3 +11,9 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+      - uses: devmasx/coverage-check-action@v1.2.0
+        with:
+          type: lcov
+          result_path: coverage/example.lcov
+          min_coverage: 90
+          token: ${{ github.token }}

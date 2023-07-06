@@ -4,7 +4,7 @@ exports[`<NavigationIndicator/> component renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="css-15vddy2"
-    data-testid="navigation-indicator"
+    data-testid="NavigationIndicator"
   />
   <span
     hidden=""
