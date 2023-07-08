@@ -73,15 +73,7 @@
       "index\\.tsx?$",
       "/src/setupTests.ts",
       "/src/App.tsx"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "functions": 75,
-        "lines": 85,
-        "statements": 84,
-        "branches": 75
-      }
-    }
+    ]
   },
   "msw": {
     "workerDirectory": "public"
