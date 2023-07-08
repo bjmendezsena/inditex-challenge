@@ -7,7 +7,7 @@ import { RoutePath } from "../router/RouterManager";
 
 export const MainLayout = () => {
   const location = useLocation();
-  const [isNavigating, setIsNavigating] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(true);
 
   useEffect(() => {
     setIsNavigating(false);

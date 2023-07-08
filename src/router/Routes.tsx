@@ -9,7 +9,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: RoutePath.PodcastList,
-        element: <Views.PodcastList />,
+        element: <Views.PodcastListPage />,
       },
       {
         element: <PodcastLayout />,
