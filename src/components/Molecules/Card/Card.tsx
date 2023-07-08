@@ -1,5 +1,5 @@
 import { useMultiStyleConfig as useChakraMultiStyleConfig } from "@chakra-ui/system";
-import { VStack as ChakraVStack } from "@chakra-ui/react";
+import { VStack as ChakraVStack, Center } from "@chakra-ui/react";
 import {
   Card as ChakraCard,
   CardProps as ChakraCardProps,
@@ -70,17 +70,19 @@ export const Card = ({
   return (
     <ChakraCard {...props} sx={styles.container}>
       <ChakraCardHeader sx={styles.header} {...headerProps}>
-        <Avatar
-          ref={avatarRef}
-          src={img}
-          isLoading={isLoading}
-          size='lg'
-          sx={styles.avatar}
-        />
+        <Center top={12} position={"relative"}>
+          <Avatar
+            ref={avatarRef}
+            src={img}
+            isLoading={isLoading}
+            size='lg'
+            sx={styles.avatar}
+          />
+        </Center>
       </ChakraCardHeader>
 
       <ChakraCardBody ref={bodyRef} sx={styles.body} {...bodyProps}>
-        {isLoading ? <Spinner /> : <Content {...props} />}
+        {isLoading ? <Spinner color='primary' /> : <Content {...props} />}
       </ChakraCardBody>
       {footer && !isLoading && (
         <ChakraCardFooter sx={styles.footer} {...footerProps}>

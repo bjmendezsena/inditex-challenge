@@ -3,7 +3,7 @@
 exports[`<Header /> renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xv148h"
+    class="css-1gzl4dy"
     data-testid="header"
   >
     <div
@@ -36,7 +36,7 @@ exports[`<Header /> renders correctly 1`] = `
 exports[`<Header /> renders correctly only left content: OnlyLeftContent 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xv148h"
+    class="css-1gzl4dy"
     data-testid="header"
   >
     <div
@@ -62,7 +62,7 @@ exports[`<Header /> renders correctly only left content: OnlyLeftContent 1`] = `
 exports[`<Header /> renders correctly only right content: OnlyRightContent 1`] = `
 <DocumentFragment>
   <div
-    class="css-1xv148h"
+    class="css-1gzl4dy"
     data-testid="header"
   >
     <div
