@@ -37,6 +37,7 @@ exports[`<Card/> component renders correctly 1`] = `
     </div>
     <div
       class="chakra-card__body css-bwepl0"
+      data-testid="card-content"
     >
       <div
         class="chakra-stack css-tl3ftk"
@@ -98,6 +99,7 @@ exports[`<Card/> component renders correctly with header: WithHeader 1`] = `
     </div>
     <div
       class="chakra-card__body css-bwepl0"
+      data-testid="card-content"
     >
       <div
         class="chakra-stack css-tl3ftk"
@@ -159,6 +161,7 @@ exports[`<Card/> component renders correctly with img: WithImg 1`] = `
     </div>
     <div
       class="chakra-card__body css-bwepl0"
+      data-testid="card-content"
     >
       <div
         class="chakra-stack css-tl3ftk"
@@ -204,6 +207,7 @@ exports[`<Card/> component renders correctly with isLoading: WithIsLoading 1`] =
     </div>
     <div
       class="chakra-card__body css-bwepl0"
+      data-testid="card-content"
     >
       <div
         class="chakra-spinner css-18f4w0n"

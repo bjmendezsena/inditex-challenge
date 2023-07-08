@@ -81,7 +81,12 @@ export const Card = ({
         </Center>
       </ChakraCardHeader>
 
-      <ChakraCardBody ref={bodyRef} sx={styles.body} {...bodyProps}>
+      <ChakraCardBody
+        data-testid='card-content'
+        ref={bodyRef}
+        sx={styles.body}
+        {...bodyProps}
+      >
         {isLoading ? <Spinner color='primary' /> : <Content {...props} />}
       </ChakraCardBody>
       {footer && !isLoading && (

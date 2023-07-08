@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainLayout/> should render without crashing 1`] = `
+<div>
+  <div
+    class="css-tw0lc1"
+  >
+    <div
+      class="css-1gzl4dy"
+      data-testid="header"
+    >
+      <div
+        class="css-1k3povc"
+      >
+        <a
+          class="chakra-link css-2otp49"
+          data-testid="link"
+          href="/"
+          tabindex="0"
+        >
+          Podcaster
+        </a>
+        <div
+          class="css-15vddy2"
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

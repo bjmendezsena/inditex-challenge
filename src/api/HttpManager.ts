@@ -9,7 +9,7 @@ export const get = <T>(url: string, params: any = {}) => {
           if (!value) return "";
           return `${key}=${params[key]}`;
         })
-        .join("/");
+        .join("&");
     },
   });
 };
