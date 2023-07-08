@@ -71,7 +71,8 @@
       "/src/constants/*",
       "/src/services/*",
       "index\\.tsx?$",
-      "/src/setupTests.ts"
+      "/src/setupTests.ts",
+      "/src/App.tsx"
     ],
     "coverageThreshold": {
       "global": {
