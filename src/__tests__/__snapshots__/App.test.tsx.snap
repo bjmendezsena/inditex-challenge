@@ -31,7 +31,7 @@ exports[`<App/> should render without crash 1`] = `
     at /Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/node_modules/@testing-library/react/dist/act-compat.js:63:25
     at renderRoot (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/node_modules/@testing-library/react/dist/pure.js:159:26)
     at render (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/node_modules/@testing-library/react/dist/pure.js:246:10)
-    at Object.&lt;anonymous&gt; (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/src/__tests__/App.test.tsx:6:33)
+    at Object.&lt;anonymous&gt; (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/src/__tests__/App.test.tsx:7:33)
     at Promise.then.completed (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/node_modules/jest-circus/build/utils.js:391:28)
     at new Promise (&lt;anonymous&gt;)
     at callAsyncCircusFn (/Users/briaulinmendez/Desktop/pruebas_tecnicas/inditex-challenge/node_modules/jest-circus/build/utils.js:316:10)
