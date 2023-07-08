@@ -1,7 +1,7 @@
 import type { ReverseParams } from "named-urls";
 import { reverse } from "named-urls";
 import { router } from "../index";
-import { RouteKey, RouteName } from "./RouteName";
+import { RouteKey, RouteName,  } from "./RouteName";
 import { RoutePath } from "./RoutePath";
 
 export interface RouteParams {
@@ -20,11 +20,13 @@ export class BaseRouterManager {
     if (path) return path;
     if (!name) throw new Error("name or path is required");
     const pattern = this.routes[name] + extra;
+    console.log("pattern", pattern);
     return reverse(pattern, params);
   }
 
   to({ state, replace, ...params }: RouteParams) {
     const pathname = this.getPath(params);
+    console.log("pathname", pathname);
     return router.navigate({ pathname }, { state, replace });
   }
 

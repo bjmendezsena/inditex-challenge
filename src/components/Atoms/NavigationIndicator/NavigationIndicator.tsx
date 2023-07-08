@@ -19,13 +19,6 @@ export interface NavigationIndicatorProps extends FlexProps {
 }
 
 export const NavigationIndicator = (props: NavigationIndicatorProps) => {
-  console.log("IsNavigating", props.isNavigating);
   const themeStyles = useStyleConfig("NavigationIndicator", props);
-  return (
-    <ChakraFlex
-      data-testid='navigation-indicator'
-      {...props}
-      sx={themeStyles}
-    />
-  );
+  return <ChakraFlex sx={themeStyles} {...props} />;
 };

@@ -7,7 +7,9 @@ import {
 
 describe(`<${NavigationIndicator.name}/> component`, () => {
   const factoryComponent = (props?: NavigationIndicatorProps) =>
-    render(<NavigationIndicator {...props} />);
+    render(
+      <NavigationIndicator {...props} data-testid={NavigationIndicator.name} />
+    );
 
   test("renders correctly", () => {
     const view = factoryComponent();
@@ -16,7 +18,7 @@ describe(`<${NavigationIndicator.name}/> component`, () => {
 
   test("No display when isNavigating is false", async () => {
     factoryComponent();
-    const container = screen.getByTestId("navigation-indicator");
+    const container = screen.getByTestId(NavigationIndicator.name);
 
     await waitFor(() => {
       expect(container).toHaveStyle("display: none");
@@ -26,7 +28,7 @@ describe(`<${NavigationIndicator.name}/> component`, () => {
     factoryComponent({
       isNavigating: true,
     });
-    const container = screen.getByTestId("navigation-indicator");
+    const container = screen.getByTestId(NavigationIndicator.name);
 
     await waitFor(() => {
       expect(container).toHaveStyle("display: block");

@@ -8,13 +8,15 @@ export const ConfigCard: CardThemeConfig = {
       borderRadius: "md",
       boxShadow: "none",
       p: 4,
+      maxW: "230px",
     },
     body: {
+      overflowY:'hidden',
       transition: "all 0.02s ease-in-out",
       mb: 4,
       bg: "white",
       borderRadius: "md",
-      boxShadow: "base",
+      boxShadow: "md",
       p: 4,
       minW: "150px",
       minH: "120px",
@@ -36,23 +38,21 @@ export const ConfigCard: CardThemeConfig = {
       justifyContent: "center",
     },
     avatar: {
-      position: "absolute",
       bg: "gray.100",
-      top: "0",
-      left: "30%",
       _hover: {
         cursor: "pointer",
       },
     },
     title: {
-      fontSize: "xl",
+      fontSize: "15px",
       fontWeight: "semibold",
       color: "black",
     },
     description: {
-      fontSize: "sm",
+      fontSize: "12px",
       fontWeight: "regular",
       color: "text.bold",
+      textOverflow:'ellipsis',
     },
   }),
 };
