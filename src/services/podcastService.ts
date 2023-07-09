@@ -17,7 +17,6 @@ export const fetchPodcastList = async ({
   )
     .then((resp) => resp.data)
     .catch((err) => {
-      console.log(err);
       throw new HttpException(400, "Bad request");
     });
 };
@@ -31,13 +30,10 @@ export const fetchPodcastById = async (
   id: string,
   options: FetchPodcastByIdArgs = {}
 ) => {
-  return HttpManager.get<PodcastDetailsResponse>(
-    format(ApiUrls.getPodcastById),
-    {
-      id,
-      ...options,
-    }
-  )
+  return HttpManager.get<PodcastDetailsResponse>(ApiUrls.getPodcastById, {
+    id,
+    ...options,
+  })
     .then((resp) => resp.data)
     .catch((err) => {
       console.log(err);

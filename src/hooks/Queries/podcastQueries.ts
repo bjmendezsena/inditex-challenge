@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import {
   FetchPodcastListArgs,
@@ -30,10 +31,39 @@ export const usePodcastDetails = (
     limit: 20,
   }
 ) => {
-  return useQuery([PODCAST_DETAILS_KEY, id], () => fetchPodcastById(id!, args), {
-    enabled: !!id,
-    onError(error) {
-      console.log(error);
-    },
+  const [podcastInfo, setPodcastInfo] = useState<{
+    title: string;
+    author: string;
+    image: string;
+    trackCount?: number;
+  }>({
+    title: "",
+    author: "",
+    image: "",
   });
+  const query = useQuery(
+    [PODCAST_DETAILS_KEY, id],
+    () => fetchPodcastById(id!, args),
+    {
+      enabled: !!id,
+      onError() {
+        setPodcastInfo({
+          title: "",
+          author: "",
+          image: "",
+        });
+      },
+      onSuccess(data) {
+        const [info] = data.results;
+        setPodcastInfo({
+          title: info?.collectionName,
+          author: info?.artistName || "",
+          image: info.artworkUrl600 || "",
+          trackCount: info?.trackCount,
+        });
+      },
+    }
+  );
+
+  return { ...query, podcastInfo };
 };

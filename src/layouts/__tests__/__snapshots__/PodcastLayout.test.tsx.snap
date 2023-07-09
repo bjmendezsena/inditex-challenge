@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PodcastLayout/> should render without crashing 1`] = `
+<div>
+  <div
+    class="css-9ywscx"
+  >
+    <div
+      class="css-0"
+    >
+      <div
+        class="chakra-card css-1h3y5ak"
+      >
+        <div
+          class="chakra-card__body css-bwepl0"
+        >
+          <div
+            class="chakra-stack css-b93e9j"
+          >
+            <div
+              class="chakra-skeleton css-fnhvzt"
+            >
+              <img
+                alt=""
+                class="chakra-image css-sitj8d"
+                src=""
+              />
+            </div>
+            <div
+              class="chakra-stack__divider css-701422"
+            />
+            <div
+              class="css-1ofqig9"
+            >
+              <div
+                class="chakra-skeleton css-1mdjp85"
+              />
+              <div
+                class="chakra-skeleton css-1buwyc7"
+              />
+            </div>
+            <div
+              class="chakra-stack__divider css-701422"
+            />
+            <div
+              class="css-1ofqig9"
+            >
+              <h2
+                class="chakra-heading css-18cb01y"
+              >
+                Description
+              </h2>
+              <div
+                class="chakra-skeleton__group css-rltemf"
+              >
+                <div
+                  class="chakra-skeleton css-ctcxab"
+                />
+                <div
+                  class="chakra-skeleton css-ctcxab"
+                />
+                <div
+                  class="chakra-skeleton css-12r9lpq"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="css-0"
+    />
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

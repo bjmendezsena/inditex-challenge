@@ -1,3 +1,3 @@
 export * from './EpisodeDetails';
-export * from './PodcastDetails';
+export * from './PodcastDetailsPage';
 export * from './PodcastListPage';

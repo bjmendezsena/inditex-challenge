@@ -22,6 +22,7 @@ export const PodcastListPage = () => {
         image: item["im:image"][2].label,
         title: item.title.label,
         description: `Author: ${item["im:artist"].label}`,
+        summary: item.summary.label,
       }))
       .filter(
         (item) =>

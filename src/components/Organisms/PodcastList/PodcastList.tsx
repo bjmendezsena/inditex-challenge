@@ -9,6 +9,7 @@ export type PodcastInfo = {
   image: string;
   title: string;
   description: string;
+  summary: string;
 };
 
 export interface PodcastListProps {
@@ -39,6 +40,9 @@ export const PodcastList = ({ isLoading, source }: PodcastListProps) => {
               onClick={() => {
                 RouterManager.to(RouteName.PodcastDetails, {
                   params: { podcastId: id },
+                  state: {
+                    summary: rest.summary,
+                  },
                 });
               }}
               img={image}
