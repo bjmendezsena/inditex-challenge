@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from "react";
 import { createColumnHelper } from "@tanstack/react-table";
-import { useParams } from "react-router-dom";
+import { useParams, Link as RRDLink } from "react-router-dom";
 import { format } from "date-fns";
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   Flex,
   Heading,
   Skeleton,
+  Link,
 } from "@chakra-ui/react";
 import { Text, Table } from "../../components";
 import { usePodcastDetails } from "../../hooks";
@@ -22,6 +23,9 @@ interface PodcastTableData {
   trackName: string;
   releaseDate: string;
   trackTimeMillis: number;
+  collectionId: number;
+  trackId: number;
+  raw: Result;
 }
 
 const columnHelper = createColumnHelper<PodcastTableData>();
@@ -29,6 +33,26 @@ const columnHelper = createColumnHelper<PodcastTableData>();
 const columns = [
   columnHelper.accessor("trackName", {
     header: "Title",
+    size: 400,
+    cell: ({ getValue, row }) => {
+      const { original } = row;
+      console.log({ original });
+      return (
+        <Link
+          data-testid={`episode-${original.trackId}`}
+          as={RRDLink}
+          to={RouterManager.getUrl(RouteName.EpisodeDetails, {
+            podcastId: original.collectionId,
+            episodeId: original.trackId,
+          })}
+          sx={{
+            fontWeight: "regular",
+          }}
+        >
+          {getValue()}
+        </Link>
+      );
+    },
   }),
   columnHelper.accessor("releaseDate", {
     header: "Date",
@@ -44,7 +68,7 @@ const columns = [
   }),
 ];
 
-export const PodcastDetails = () => {
+export const PodcastDetailsPage = () => {
   const { podcastId } = useParams<{ podcastId: string }>();
 
   useEffect(() => {
@@ -56,7 +80,7 @@ export const PodcastDetails = () => {
 
   const { data, podcastInfo, isLoading } = usePodcastDetails(podcastId);
 
-  const sourceData = useMemo(() => {
+  const sourceData: PodcastTableData[] = useMemo(() => {
     if (!data) return [];
     return data.results
       .filter((item) => !item.artistName)
@@ -64,6 +88,9 @@ export const PodcastDetails = () => {
         trackName: item.trackName,
         releaseDate: item.releaseDate,
         trackTimeMillis: item.trackTimeMillis,
+        collectionId: item.collectionId,
+        trackId: item.trackId,
+        raw: item,
       }));
   }, [data]);
 

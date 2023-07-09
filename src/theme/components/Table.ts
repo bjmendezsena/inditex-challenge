@@ -10,7 +10,7 @@ const baseStyle: TableThemeConfiguration["baseStyle"] = () => ({
   },
   header: {
     py: 3,
-    px: 4,
+    px: 1,
     textAlign: "left",
   },
   cell: {

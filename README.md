@@ -1,4 +1,14 @@
-## Getting starting application
+## Installation
 
-- To run app in dev mode change `REACT_APP_MODE` enviroment variable value to `dev`.
-- To run app in prod mode change `REACT_APP_MODE` enviroment variable value to `prod`.
+### Prerequisites
+
+- `Node` must been installed
+
+
+
+### Setup
+
+1. Clone this repo to your computer
+2. Copy `.env-example` to `.env`
+2. Execute `yarn` or `npm install`
+3. Execute `yarn start` or `npm start`
