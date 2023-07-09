@@ -2,6 +2,7 @@ import { ChangeEvent, useMemo, useState } from "react";
 import { Container, Tag, Flex, Skeleton, HStack } from "@chakra-ui/react";
 import { usePodcastList } from "../../hooks";
 import { PodcastList, Input, type PodcastInfo } from "../../components";
+import { mapEntryToInfo } from "../../utils";
 
 export const PodcastListPage = () => {
   const { data, isLoading } = usePodcastList();
@@ -16,14 +17,7 @@ export const PodcastListPage = () => {
   const source: PodcastInfo[] = useMemo(() => {
     if (!data?.feed.entry) return [];
     return data.feed.entry
-      .map((item) => ({
-        id: item.id.attributes["im:id"],
-        name: item["im:name"].label,
-        image: item["im:image"][2].label,
-        title: item.title.label,
-        description: `Author: ${item["im:artist"].label}`,
-        summary: item.summary.label,
-      }))
+      .map(mapEntryToInfo)
       .filter(
         (item) =>
           item.name.toLowerCase().includes(filterValue.toLowerCase()) ||
