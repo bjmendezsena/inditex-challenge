@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> renders correctly 1`] = `
+<DocumentFragment>
+  <label
+    class="css-mimi7r"
+    for="test-input"
+  >
+    <span
+      class="css-b977hv"
+      id="label"
+    >
+      label
+    </span>
+    <div
+      class="chakra-input__group css-pwmwmr"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-1n414k7"
+        id="test-input"
+        placeholder="placeholder"
+      />
+    </div>
+  </label>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Input /> shows correctly when is disabled: Using as disabled 1`] = `
+<DocumentFragment>
+  <label
+    class="css-mimi7r"
+    for="test-input"
+  >
+    <span
+      class="css-b977hv"
+      id="label"
+    >
+      label
+    </span>
+    <div
+      class="chakra-input__group css-pwmwmr"
+      data-group="true"
+    >
+      <input
+        class="chakra-input css-1n414k7"
+        disabled=""
+        id="test-input"
+        placeholder="placeholder"
+      />
+    </div>
+  </label>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;

@@ -1,12 +1,6 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
 import { server } from "./mocks/server";
 import { ApiMocksDirector } from "./mocks/ApiMocksDirector";
-
-
 
 // Mocking API
 beforeAll(() => {
@@ -17,7 +11,17 @@ afterEach(() => {
 });
 afterAll(() => server.close());
 
-// Mocking global variable
+window.matchMedia = (query) => ({
+  matches: false,
+  media: query,
+  onchange: null,
+  addListener: jest.fn(),
+  removeListener: jest.fn(),
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  dispatchEvent: jest.fn(),
+});
+
 // @ts-ignore
 global.apiMocks = new ApiMocksDirector(
   // @ts-ignore

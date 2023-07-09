@@ -9,29 +9,11 @@ describe(`<Text />`, () => {
     fontSize: "32px",
   };
 
-  const themeCustom = {
-    textStyles: {
-      red: {
-        color: "red",
-      },
-    },
-    components: {
-      Text: {
-        variants: {
-          regular: {
-            fontFamily: "Helvetica Neue",
-          },
-        },
-      },
-    },
-  };
-
   const factoryComponent = (props: TextProps = defaultProps) =>
     render(
-      <Text {...props} data-testid="Text">
+      <Text {...props} data-testid='Text'>
         Text example
-      </Text>,
-      themeCustom
+      </Text>
     );
 
   test("renders correctly", () => {

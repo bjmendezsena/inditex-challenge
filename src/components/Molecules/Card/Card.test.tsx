@@ -1,8 +1,8 @@
 import { screen } from "@testing-library/react";
-
+import userEvent from "@testing-library/user-event";
 import { render } from "../../../test-utils";
 import { Card, CardProps } from "./Card";
-import userEvent from "@testing-library/user-event";
+
 
 const src = "https://placekitten.com/200/200";
 

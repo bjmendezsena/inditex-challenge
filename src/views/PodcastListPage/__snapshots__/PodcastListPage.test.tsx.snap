@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PodcastListPage/> should render without crashing 1`] = `
+<div>
+  <div
+    class="chakra-container css-cndrer"
+  >
+    <div
+      class="css-uiprym"
+    >
+      <div
+        class="chakra-stack css-1igwmid"
+      >
+        <div
+          class="chakra-skeleton css-v6468e"
+        />
+        <label
+          class="css-mimi7r"
+        >
+          <div
+            class="chakra-input__group css-pwmwmr"
+            data-group="true"
+          >
+            <input
+              class="chakra-input css-39zo0z"
+              placeholder="Filter podcasts..."
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      class="css-1xnwmz9"
+    >
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="chakra-card css-1jvhf43"
+        >
+          <div
+            class="chakra-card__header css-18f68ux"
+          >
+            <div
+              class="css-14w3rw9"
+            >
+              <div
+                class="chakra-skeleton css-1536nqa"
+              />
+            </div>
+          </div>
+          <div
+            class="chakra-card__body css-bwepl0"
+            data-testid="card-content"
+          >
+            <div
+              class="chakra-spinner css-18f4w0n"
+              data-testid="spinner"
+            >
+              <span
+                class="css-8b45rq"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;

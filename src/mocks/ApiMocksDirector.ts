@@ -10,12 +10,18 @@ export class ApiMocksDirector {
     private readonly baseUrl: string
   ) {}
 
-  public getPodcast(status: "ok" | "failed"): void {
+  public getPodcasts(status: "ok" | "failed"): void {
     const url = format(
       `${this.baseUrl}${ApiUrls.getPodcasts}`,
       ":limit",
       ":genre"
     );
+    const handler = status === "ok" ? Response200Handle : Response500Handle;
+    this.worker.use(rest.get(url, handler));
+  }
+
+  public getPodcastDetails(status: "ok" | "failed"): void {
+    const url = `${this.baseUrl}${ApiUrls.getPodcastById}`;
     const handler = status === "ok" ? Response200Handle : Response500Handle;
     this.worker.use(rest.get(url, handler));
   }

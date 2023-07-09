@@ -1,4 +1,6 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Router } from "react-router-dom";
+import { createMemoryHistory, MemoryHistory } from "history";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { RenderResult } from "@testing-library/react";
 import { render as testingLibraryRender } from "@testing-library/react";
@@ -27,9 +29,25 @@ export const queryWrapper = ({ children }: { children: React.ReactNode }) => (
 
 const DefaultTheme = extendTheme(theme);
 
-export const render = (ui: JSX.Element, theme = DefaultTheme): RenderResult => {
+const memoryHistory = createMemoryHistory();
+
+interface RenderOptions {
+  history?: MemoryHistory;
+}
+
+export const render = (
+  ui: JSX.Element,
+  { history: customHistory }: RenderOptions = {}
+): RenderResult => {
+  const history = customHistory || memoryHistory;
   const wrapper = ({ children }: { children?: React.ReactNode }) => (
-    <ChakraProvider theme={theme}>{children}</ChakraProvider>
+    <QueryClientProvider client={testQueryClient}>
+      <ChakraProvider theme={DefaultTheme}>
+        <Router location={history.location} navigator={history}>
+          {children}
+        </Router>
+      </ChakraProvider>
+    </QueryClientProvider>
   );
 
   return testingLibraryRender(ui, { wrapper });
