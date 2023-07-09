@@ -1,7 +1,8 @@
-import { act, renderHook, waitFor } from "@testing-library/react";
+import { renderHook, waitFor } from "@testing-library/react";
 import podcastJson from "../../../dataset/podcasts.json";
+import podcastDetailsJson from "../../../dataset/podcastDetails.json";
 import { queryWrapper } from "../../../test-utils";
-import { usePodcastList } from "../podcastQueries";
+import { usePodcastList, usePodcastDetails } from "../podcastQueries";
 import { HttpException } from "../../../exceptions";
 
 describe("usePodcastList", () => {
@@ -16,8 +17,32 @@ describe("usePodcastList", () => {
   });
 
   it("should return error", async () => {
-    apiMocks.getPodcast("failed");
+    apiMocks.getPodcasts("failed");
     const { result } = renderHook(() => usePodcastList(), {
+      wrapper: queryWrapper,
+    });
+
+    await waitFor(() => expect(result.current.isError).toBeTruthy());
+
+    expect(result.current.error).toEqual(new HttpException(400, "Bad request"));
+  });
+});
+
+describe("usePodcastDetails", () => {
+  it("should return podcast details", async () => {
+    const { result } = renderHook(() => usePodcastDetails("1"), {
+      wrapper: queryWrapper,
+    });
+
+
+    await waitFor(() => expect(result.current.isSuccess).toBeTruthy());
+
+    expect(result.current.data).toEqual(podcastDetailsJson);
+  });
+
+  it("should return error", async () => {
+    apiMocks.getPodcastDetails("failed");
+    const { result } = renderHook(() => usePodcastDetails("1"), {
       wrapper: queryWrapper,
     });
 

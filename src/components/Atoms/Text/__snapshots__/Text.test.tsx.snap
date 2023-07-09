@@ -3,7 +3,7 @@
 exports[`<Text /> renders correctly 1`] = `
 <DocumentFragment>
   <p
-    class="css-idm3bz"
+    class="css-buc8j9"
     data-testid="Text"
   >
     Text example
@@ -18,7 +18,7 @@ exports[`<Text /> renders correctly 1`] = `
 exports[`<Text /> renders correctly with custom Text tag: WithCustomTag 1`] = `
 <DocumentFragment>
   <span
-    class="css-0"
+    class="css-niwogb"
     data-testid="Text"
   >
     Text example
@@ -33,7 +33,7 @@ exports[`<Text /> renders correctly with custom Text tag: WithCustomTag 1`] = `
 exports[`<Text /> renders correctly with text style: WithTextStyle 1`] = `
 <DocumentFragment>
   <p
-    class="css-tokvmb"
+    class="css-0"
     data-testid="Text"
   >
     Text example
@@ -48,7 +48,7 @@ exports[`<Text /> renders correctly with text style: WithTextStyle 1`] = `
 exports[`<Text /> renders correctly with variant: WithVariant 1`] = `
 <DocumentFragment>
   <p
-    class="css-0"
+    class="css-niwogb"
     data-testid="Text"
   >
     Text example

@@ -1,17 +1,25 @@
 import { useMemo, Children } from "react";
 import { SimpleGrid, GridItem } from "@chakra-ui/react";
 import { Card } from "../../Molecules";
-import { RouterManager } from "../../../router";
-import { Entry } from "../../../interfaces";
+import { RouteName, RouterManager } from "../../../router";
+
+export type PodcastInfo = {
+  id: string;
+  name: string;
+  image: string;
+  title: string;
+  description: string;
+  summary: string;
+};
 
 export interface PodcastListProps {
   isLoading?: boolean;
-  source?: Entry[];
+  source?: PodcastInfo[];
 }
 
 export const PodcastList = ({ isLoading, source }: PodcastListProps) => {
-  const data: Entry[] = useMemo(
-    () => (isLoading ? Array.from({ length: 10 }) : source || []),
+  const data: PodcastInfo[] = useMemo(
+    () => (isLoading ? Array(8).fill({}) : source || []),
     [isLoading, source]
   );
   return (
@@ -22,22 +30,23 @@ export const PodcastList = ({ isLoading, source }: PodcastListProps) => {
         md: 4,
       }}
       overflowY='auto'
-      maxH='550px'
+      maxH='100%'
     >
       {Children.toArray(
-        data.map((item) => (
+        data.map(({ id, image, ...rest }) => (
           <GridItem>
             <Card
               isLoading={isLoading}
               onClick={() => {
-                RouterManager.to({
-                  name: "EpisodeDetails",
-                  params: { podcastId: "1", episodeId: "21" },
+                RouterManager.to(RouteName.PodcastDetails, {
+                  params: { podcastId: id },
+                  state: {
+                    summary: rest.summary,
+                  },
                 });
               }}
-              img={item["im:image"][2].label}
-              title={item.title.label}
-              description={`Author: ${item["im:artist"].label}`}
+              img={image}
+              {...rest}
             />
           </GridItem>
         ))

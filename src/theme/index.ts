@@ -7,9 +7,10 @@ import { ConfigNavigationIndicator } from "./components/NavigationIndicator";
 import { ConfigSpinner } from "./components/Spinner";
 import { ConfigText } from "./components/Text";
 import { ConfigCard } from "./components/Card";
+import { ConfigInput } from "./components/Input";
+import { ConfigTable } from "./components/Table";
 
 import colors from "./colors";
-
 
 export const theme = extendTheme({
   config: {
@@ -25,7 +26,8 @@ export const theme = extendTheme({
     Spinner: ConfigSpinner,
     Text: ConfigText,
     Card: ConfigCard,
-
+    Input: ConfigInput,
+    PodcastTable: ConfigTable,
   },
   global: {
     body: {
