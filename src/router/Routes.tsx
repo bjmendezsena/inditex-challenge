@@ -16,11 +16,11 @@ const routes: RouteObject[] = [
         children: [
           {
             path: RoutePath.PodcastDetails,
-            element: <Views.PodcastDetails />,
+            element: <Views.PodcastDetailsPage />,
           },
           {
             path: RoutePath.EpisodeDetails,
-            element: <Views.EpisodeDetails />,
+            element: <Views.EpisodeDetailsPage />,
           },
         ],
       },

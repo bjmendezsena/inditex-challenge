@@ -3,8 +3,9 @@ import userEvent from "@testing-library/user-event";
 import { createMemoryHistory } from "history";
 import { matchPath } from "react-router-dom";
 import { render } from "../../test-utils";
-import { PodcastLayout } from "../PodcastLayout";
 import { RouterManager, RouteName } from "../../router";
+import podcastDetailsJson from "../../dataset/podcastDetails.json";
+import { PodcastDetailsPage } from "./PodcastDetailsPage";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -13,10 +14,10 @@ jest.mock("react-router-dom", () => ({
   }),
 }));
 
-describe(`<${PodcastLayout.name}/>`, () => {
+describe(`<${PodcastDetailsPage.name}/>`, () => {
   const history = createMemoryHistory();
   const factoryComponent = () =>
-    render(<PodcastLayout />, {
+    render(<PodcastDetailsPage />, {
       history,
     });
 
@@ -25,14 +26,15 @@ describe(`<${PodcastLayout.name}/>`, () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("Should navigate to the podcast details page when clicking on the podcast card", () => {
+  it("Should navigate to episode details page when click on episode name", async () => {
     factoryComponent();
-
-    userEvent.click(screen.getByTestId("podcast-details-card"));
+    const episode = podcastDetailsJson.results[1];
+    userEvent.click(screen.getByTestId(`episode-${episode.trackId}`));
     expect(
       matchPath(
-        RouterManager.getUrl(RouteName.PodcastDetails, {
-          podcastId: "199",
+        RouterManager.getUrl(RouteName.EpisodeDetails, {
+          podcastId: episode.collectionId,
+          episodeId: episode.trackId,
         }),
         history.location.pathname
       )

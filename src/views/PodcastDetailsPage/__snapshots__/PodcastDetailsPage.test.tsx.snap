@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PodcastDetailsPage/> should render without crashing 1`] = `
+<div>
+  <div
+    class="chakra-container css-up7ra3"
+  >
+    <div
+      class="chakra-card css-1w0i8ar"
+    >
+      <div
+        class="chakra-card__body css-1wuju2"
+      >
+        <div
+          class="css-uj3782"
+        >
+          <div
+            class="chakra-skeleton css-yxcjy8"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="chakra-card css-1w0i8ar"
+    >
+      <div
+        class="chakra-card__body css-1i7w1qe"
+      >
+        <div
+          class="css-0"
+        >
+          <div
+            class="css-t1ecuf"
+          >
+            <table
+              class="chakra-table css-1td08nr"
+              data-testid="table-episode"
+            >
+              <tbody
+                class="css-tdnrhj"
+              >
+                <tr
+                  class="css-bxak8j"
+                >
+                  <th
+                    class="css-h4tswt"
+                  >
+                    Title
+                  </th>
+                  <th
+                    class="css-223udn"
+                  >
+                    Date
+                  </th>
+                  <th
+                    class="css-223udn"
+                  >
+                    Duration
+                  </th>
+                </tr>
+                <tr
+                  class="css-11j4jqy"
+                  data-testid="row-0"
+                >
+                  <td
+                    class="css-l132m4"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                </tr>
+                <tr
+                  class="css-11j4jqy"
+                  data-testid="row-1"
+                >
+                  <td
+                    class="css-l132m4"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                </tr>
+                <tr
+                  class="css-11j4jqy"
+                  data-testid="row-2"
+                >
+                  <td
+                    class="css-l132m4"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                </tr>
+                <tr
+                  class="css-11j4jqy"
+                  data-testid="row-3"
+                >
+                  <td
+                    class="css-l132m4"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                </tr>
+                <tr
+                  class="css-11j4jqy"
+                  data-testid="row-4"
+                >
+                  <td
+                    class="css-l132m4"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                  <td
+                    class="css-175gdrf"
+                    tabindex="0"
+                  >
+                    <div
+                      class="chakra-skeleton css-yixgko"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</div>
+`;
