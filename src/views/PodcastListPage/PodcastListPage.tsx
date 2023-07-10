@@ -1,4 +1,4 @@
-import { ChangeEvent, useMemo, useState } from "react";
+import { ChangeEvent, useMemo, useState, useDeferredValue } from "react";
 import { Container, Tag, Flex, Skeleton, HStack } from "@chakra-ui/react";
 import { usePodcastList } from "../../hooks";
 import { PodcastList, Input, type PodcastInfo } from "../../components";
@@ -8,6 +8,8 @@ export const PodcastListPage = () => {
   const { data, isLoading } = usePodcastList();
 
   const [filterValue, setFilterValue] = useState<string>("");
+
+  const deferredFilterValue = useDeferredValue(filterValue);
 
   const handleFilter = ({ target }: ChangeEvent<HTMLInputElement>) => {
     const { value } = target;
@@ -20,16 +22,20 @@ export const PodcastListPage = () => {
       .map(mapEntryToInfo)
       .filter(
         (item) =>
-          item.name.toLowerCase().includes(filterValue.toLowerCase()) ||
-          item.title.toLowerCase().includes(filterValue.toLowerCase())
+          item.name.toLowerCase().includes(deferredFilterValue.toLowerCase()) ||
+          item.title.toLowerCase().includes(deferredFilterValue.toLowerCase())
       );
-  }, [data?.feed.entry, filterValue]);
+  }, [data?.feed.entry, deferredFilterValue]);
+
+  const isStale = useMemo(() => {
+    return deferredFilterValue !== filterValue;
+  }, [deferredFilterValue, filterValue]);
 
   return (
     <Container maxW='container.xl' pt={20} bg='white' overflow='auto'>
       <Flex w='100%' justifyContent='end'>
         <HStack alignItems='center'>
-          {isLoading ? (
+          {isLoading || isStale ? (
             <Skeleton height={6} w={10} borderRadius={5} />
           ) : (
             <Tag
@@ -39,7 +45,7 @@ export const PodcastListPage = () => {
                 color: "white",
               }}
             >
-              {data?.feed.entry.length}
+              {source.length}
             </Tag>
           )}
           <Input
@@ -54,7 +60,7 @@ export const PodcastListPage = () => {
           />
         </HStack>
       </Flex>
-      <PodcastList isLoading={isLoading} source={source} />
+      <PodcastList isLoading={isLoading || isStale} source={source} />
     </Container>
   );
 };
