@@ -7,7 +7,7 @@ export const get = <T>(url: string, params: any = {}) => {
       return Object.entries(params)
         .map(([key, value]) => {
           if (!value) return "";
-          return `${key}=${params[key]}`;
+          return `${key}=${value}`;
         })
         .join("&");
     },
