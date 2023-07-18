@@ -1,4 +1,4 @@
-import { screen } from "@testing-library/react";
+import { screen, act, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { render } from "../../test-utils";
 import podcastsJson from "../../dataset/podcasts.json";
@@ -14,13 +14,16 @@ describe(`<${PodcastListPage.name}/>`, () => {
 
   it("should render with 100 cards", () => {
     factoryComponent();
-    expect(screen.getAllByTestId("card-content").length).toBe(podcastsJson.feed.entry.length);
+    expect(screen.getAllByTestId("card-content").length).toBe(
+      podcastsJson.feed.entry.length
+    );
   });
 
-  it("Should filter podcasts", () => {
+  it("Should filter podcasts", async () => {
     factoryComponent();
     const entry = podcastsJson.feed.entry[0];
-    userEvent.type(screen.getByRole("textbox"), entry.title.label);
+    await userEvent.type(screen.getByRole("textbox"), entry.title.label);
+
     expect(screen.getAllByTestId("card-content").length).toBe(1);
   });
 });
