@@ -1,6 +1,6 @@
 import { rest, RestRequest, RestContext, ResponseComposition } from "msw";
 import format from "format-util";
-import { ApiUrls } from "../../services";
+import { ApiUrls } from "../../api";
 import { PodcastsHandler, PodcastDetailsHandler } from "./PodcastHandler";
 
 export const Response200Handle = (

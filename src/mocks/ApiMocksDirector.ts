@@ -1,7 +1,7 @@
 import type { SetupWorkerApi } from "msw";
 import { rest } from "msw";
 import format from "format-util";
-import { ApiUrls } from "../services";
+import { ApiUrls } from "../api";
 import { Response500Handle, Response200Handle } from "./handlers";
 
 export class ApiMocksDirector {

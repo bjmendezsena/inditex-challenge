@@ -3,9 +3,9 @@ import axios from "axios";
 const apiInstance = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   proxy: {
-    protocol: "https",
-    host: "allorigins.win",
-    port: 8886,
+    protocol: process.env.REACT_APP_PROXI_PROTOCOL,
+    host: String(process.env.REACT_APP_PROXI_HOST),
+    port: Number(process.env.REACT_APP_PROXI_PORT),
   },
 });
 

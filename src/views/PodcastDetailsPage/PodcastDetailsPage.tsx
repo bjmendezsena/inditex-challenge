@@ -36,7 +36,6 @@ const columns = [
     size: 400,
     cell: ({ getValue, row }) => {
       const { original } = row;
-      console.log({ original });
       return (
         <Link
           data-testid={`episode-${original.trackId}`}
