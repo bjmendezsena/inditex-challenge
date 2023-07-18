@@ -11,6 +11,7 @@ jest.mock("react-router-dom", () => ({
   useParams: () => ({
     podcastId: "199",
   }),
+  Navigate: () => <div>PodcastListPage</div>,
 }));
 
 describe(`<${PodcastLayout.name}/>`, () => {
@@ -37,5 +38,15 @@ describe(`<${PodcastLayout.name}/>`, () => {
         history.location.pathname
       )
     ).toBeTruthy();
+  });
+
+  it("Should navigate to the podcast list page when no has podcastId", () => {
+    jest.spyOn(require("react-router-dom"), "useParams").mockReturnValue({
+      podcastId: undefined,
+    });
+
+    factoryComponent();
+
+    expect(screen.getByText("PodcastListPage")).toBeInTheDocument();
   });
 });
