@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Outlet, Navigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useParams, useLocation, Link } from "react-router-dom";
 import { usePodcastDetails } from "../hooks";
 import { RouterManager, RouteName } from "../router";
@@ -38,11 +38,6 @@ export const PodcastLayout = () => {
     }
   }, [summary]);
 
-  if (!podcastId) {
-    return (
-      <Navigate to={RouteName.PodcastList} replace />
-    );
-  }
 
   return (
     <Grid

@@ -1,14 +1,22 @@
 import "@testing-library/jest-dom";
 import { server } from "./mocks/server";
 import { ApiMocksDirector } from "./mocks/ApiMocksDirector";
+const dotenv = require("dotenv");
+dotenv.config({ path: ".env.test" });
 
-// Mocking API
+
 beforeAll(() => {
   server.listen();
 });
+
+beforeEach(() => {
+  jest.resetModules();
+});
+
 afterEach(() => {
   server.resetHandlers();
 });
+
 afterAll(() => server.close());
 
 window.matchMedia = (query) => ({
