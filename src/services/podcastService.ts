@@ -2,7 +2,7 @@ import format from "format-util";
 import { HttpManager } from "../api";
 import { HttpException } from "../exceptions";
 import { PodcastResponse, PodcastDetailsResponse } from "../interfaces";
-import { ApiUrls } from "./ApiUrls";
+import { ApiUrls } from "../api";
 
 export type FetchPodcastListArgs = {
   limit?: number;
