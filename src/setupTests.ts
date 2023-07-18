@@ -2,10 +2,11 @@ import "@testing-library/jest-dom";
 import { server } from "./mocks/server";
 import { ApiMocksDirector } from "./mocks/ApiMocksDirector";
 
-// Mocking API
+
 beforeAll(() => {
   server.listen();
 });
+
 afterEach(() => {
   server.resetHandlers();
 });

@@ -14,7 +14,7 @@ describe(`<${PodcastListPage.name}/>`, () => {
 
   it("should render with 100 cards", () => {
     factoryComponent();
-    expect(screen.getAllByTestId("card-content").length).toBe(100);
+    expect(screen.getAllByTestId("card-content").length).toBe(podcastsJson.feed.entry.length);
   });
 
   it("Should filter podcasts", () => {
