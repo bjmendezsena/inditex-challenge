@@ -22,7 +22,11 @@ describe(`<${PodcastListPage.name}/>`, () => {
   it("Should filter podcasts", async () => {
     factoryComponent();
     const entry = podcastsJson.feed.entry[0];
-    await userEvent.type(screen.getByRole("textbox"), entry.title.label);
+
+    // eslint-disable-next-line testing-library/no-unnecessary-act
+    await act(async () => {
+      await userEvent.type(screen.getByRole("textbox"), entry.title.label);
+    });
 
     expect(screen.getAllByTestId("card-content").length).toBe(1);
   });
