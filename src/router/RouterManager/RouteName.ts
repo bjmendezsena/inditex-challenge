@@ -3,5 +3,3 @@ export enum RouteName {
   PodcastDetails = "PodcastDetails",
   EpisodeDetails = "EpisodeDetails",
 }
-
-export type RouteKey = keyof typeof RouteName;
